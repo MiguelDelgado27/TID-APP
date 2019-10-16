@@ -1,13 +1,11 @@
 {
   "name": "quiz-app",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Safdar Jamal",
-    "email": "safdar.dev@gmail.com",
-    "url": "https://safdarjamal.github.io"
+    "name": "Miguel Delgado"
   },
-  "homepage": "https://safdarjamal.github.io/quiz-app",
+  "homepage": "https://MiguelDelgado27.github.io/TID-APP",
   "dependencies": {
     "he": "^1.2.0",
     "react": "^16.9.0",

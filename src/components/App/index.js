@@ -5,7 +5,7 @@ import Main from '../Main';
 import Loader from '../Loader';
 import Quiz from '../Quiz';
 
-import { PATH_BASE, AMOUNT, CATEGORY, DIFFICULTY, TYPE } from '../../api';
+import { PATH_BASE, AMOUNT } from '../../api';
 
 class App extends Component {
   constructor(props) {
@@ -23,10 +23,9 @@ class App extends Component {
   }
 
   startQuiz(selectedValues) {
-    const { category, numOfQ, difficulty, type, time } = selectedValues;
+    const { numOfQ, time } = selectedValues;
 
-    const API = `${PATH_BASE + AMOUNT + numOfQ}&${CATEGORY +
-      category}&${DIFFICULTY + difficulty}&${TYPE + type}`;
+    const API = PATH_BASE+'/'+numOfQ;
 
     this.setState({ isQuizStart: true, API, countdownTime: time });
   }

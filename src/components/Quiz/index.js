@@ -57,7 +57,7 @@ class Quiz extends Component {
 
     fetch(API)
       .then(respone => respone.json())
-      .then(result => setTimeout(() => this.setData(result.results), 1000))
+      .then(result => setTimeout(() => this.setData(result), 1000))
       .catch(error => setTimeout(() => this.resolveError(error), 1000));
   }
 
@@ -73,7 +73,6 @@ class Quiz extends Component {
 
   setData(results) {
     // console.log(results);
-
     if (results.length === 0) {
       const message =
         "The API doesn't have enough questions for your query<br />" +
@@ -91,8 +90,8 @@ class Quiz extends Component {
         }
       });
     }
-    //const quizData = results;
-    const quizData = staticQuestions;
+    const quizData = results;
+    //const quizData = staticQuestions;
     const { questionIndex } = this.state;
     const outPut = getRandomNumber(0, 3);
     const options = [...quizData[questionIndex].incorrect_answers];

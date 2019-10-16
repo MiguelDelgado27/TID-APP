@@ -36,14 +36,11 @@ class Main extends Component {
     let allFieldsSelected = false;
     let selectedValues = null;
 
-    if (category && numOfQ && difficulty && type && time) {
+    if ( numOfQ && time) {
       allFieldsSelected = true;
 
       selectedValues = {
-        category,
         numOfQ,
-        difficulty,
-        type,
         time
       };
     }
@@ -62,30 +59,9 @@ class Main extends Component {
                 <Divider />
                 <Item.Meta>
                   <Select
-                    name="category"
-                    text="Select Quiz Category"
-                    options={CATEGORIES}
-                    onChange={this.setValue}
-                  />
-                  <br />
-                  <Select
                     name="numOfQ"
                     text="Select No. of Questions"
                     options={NUM_OF_QUESTIONS}
-                    onChange={this.setValue}
-                  />
-                  <br />
-                  <Select
-                    name="difficulty"
-                    text="Select Difficulty Level"
-                    options={DIFFICULTY}
-                    onChange={this.setValue}
-                  />
-                  <br />
-                  <Select
-                    name="type"
-                    text="Select Questions Type"
-                    options={QUESTIONS_TYPE}
                     onChange={this.setValue}
                   />
                   <br />
