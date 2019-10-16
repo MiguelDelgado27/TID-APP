@@ -5,7 +5,7 @@ import Main from '../Main';
 import Loader from '../Loader';
 import Quiz from '../Quiz';
 
-import { PATH_BASE, AMOUNT } from '../../api';
+import { PATH_BASE } from '../../api';
 
 class App extends Component {
   constructor(props) {
