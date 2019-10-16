@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/TID-APP/static/js/main.f06c9e8d.chunk.js",
+    "main.js.map": "/TID-APP/static/js/main.f06c9e8d.chunk.js.map",
+    "runtime~main.js": "/TID-APP/static/js/runtime~main.efed1d82.js",
+    "runtime~main.js.map": "/TID-APP/static/js/runtime~main.efed1d82.js.map",
+    "static/css/2.ed47ec6c.chunk.css": "/TID-APP/static/css/2.ed47ec6c.chunk.css",
+    "static/js/2.8615e78d.chunk.js": "/TID-APP/static/js/2.8615e78d.chunk.js",
+    "static/js/2.8615e78d.chunk.js.map": "/TID-APP/static/js/2.8615e78d.chunk.js.map",
+    "index.html": "/TID-APP/index.html",
+    "precache-manifest.9cbe2c896cd2efe250a77bd569f2d021.js": "/TID-APP/precache-manifest.9cbe2c896cd2efe250a77bd569f2d021.js",
+    "service-worker.js": "/TID-APP/service-worker.js",
+    "static/css/2.ed47ec6c.chunk.css.map": "/TID-APP/static/css/2.ed47ec6c.chunk.css.map",
+    "static/media/semantic.min.css": "/TID-APP/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/code.png": "/TID-APP/static/media/code.60b1b385.png"
+  }
+}
