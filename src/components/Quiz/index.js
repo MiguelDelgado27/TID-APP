@@ -20,7 +20,6 @@ import Offline from '../Offline';
 import he from 'he';
 import { getRandomNumber } from '../../utils/getRandomNumber';
 
-import staticQuestions from '../../constants/questionstatic'; 
 
 
 class Quiz extends Component {

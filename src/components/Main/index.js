@@ -3,10 +3,7 @@ import { Container, Segment, Item, Divider, Button } from 'semantic-ui-react';
 import codeImg from '../../assets/images/code.png';
 import Select from '../Select';
 import {
-  CATEGORIES,
   NUM_OF_QUESTIONS,
-  DIFFICULTY,
-  QUESTIONS_TYPE,
   COUNTDOWN_TIME
 } from '../../constants';
 
@@ -30,7 +27,7 @@ class Main extends Component {
   }
 
   render() {
-    const { category, numOfQ, difficulty, type, time } = this.state;
+    const { numOfQ,time } = this.state;
     // console.log(category, numOfQ, difficulty, type, time);
 
     let allFieldsSelected = false;
