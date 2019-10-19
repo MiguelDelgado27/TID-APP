@@ -163,7 +163,7 @@ class Quiz extends Component {
   .catch(function(error) {
       console.error("Error writing document: ", error);
   });
-
+  /*Fin del snipt*/
 
   }
 
