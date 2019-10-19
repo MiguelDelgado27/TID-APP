@@ -71,7 +71,7 @@ class Quiz extends Component {
   }
 
   setData(results) {
-    // console.log(results);
+    console.log(results);
     if (results.length === 0) {
       const message =
         "The API doesn't have enough questions for your query<br />" +
