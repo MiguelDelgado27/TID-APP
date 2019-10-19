@@ -150,6 +150,21 @@ class Quiz extends Component {
       outPut,
       questionsAndAnswers
     });
+
+    /*Snipt para agregar un documento*/
+    db.collection("questions").doc("prueba01").set({
+      correct_answer: "Correcta papi",
+      incorrect_answers: ["malo","muy malo","recontra malo","hipermalo"],
+      question: "Question papi"
+  })
+  .then(function() {
+      console.log("Document successfully written!");
+  })
+  .catch(function(error) {
+      console.error("Error writing document: ", error);
+  });
+
+
   }
 
   timesUp() {
@@ -253,7 +268,7 @@ class Quiz extends Component {
                       <Header as="h1" block floated="left">
                         <Icon name="info circle" />
                         <Header.Content>
-                          {`Pregunta del ${questionIndex + 1} al ${
+                          {`Pregunta No. ${questionIndex + 1} de ${
                             quizData.length
                           }`}
                         </Header.Content>
@@ -325,7 +340,7 @@ class Quiz extends Component {
                       {userSlectedAns ? (
                         <Button
                           primary
-                          content="Next"
+                          content="Siguiente"
                           onClick={this.handleNext}
                           floated="right"
                           size="big"
@@ -336,7 +351,7 @@ class Quiz extends Component {
                         <Button
                           disabled
                           primary
-                          content="Next"
+                          content="Siguiente"
                           floated="right"
                           size="big"
                           icon="right chevron"
