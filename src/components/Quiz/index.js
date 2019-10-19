@@ -153,7 +153,7 @@ class Quiz extends Component {
 
 
     /*Snipt para agregar un documento*/
-    console.log("Prueba de una salida en log 2");
+    console.log("Prueba de una salida en log 3");
 
   var addYourDoc = db.collection('questions').add({
     correct_answer: "Correcta papi",
