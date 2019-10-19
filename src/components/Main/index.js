@@ -64,7 +64,7 @@ class Main extends Component {
                   <br />
                   <Select
                     name="time"
-                    text="Select Countdown Time (In Minutes)"
+                    text="Select Countdown Time (En minutos puto)"
                     options={COUNTDOWN_TIME}
                     onChange={this.setValue}
                   />
@@ -74,7 +74,7 @@ class Main extends Component {
                   {allFieldsSelected ? (
                     <Button
                       primary
-                      content="Comienza putito!"
+                      content="Start Quiz"
                       onClick={() => this.props.startQuiz(selectedValues)}
                       size="big"
                       icon="play"
@@ -84,7 +84,7 @@ class Main extends Component {
                     <Button
                       disabled
                       primary
-                      content="Comienza putito!"
+                      content="Start Quiz"
                       size="big"
                       icon="play"
                       labelPosition="right"
