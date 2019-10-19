@@ -273,7 +273,7 @@ class Quiz extends Component {
                       </Message>
                       <br />
                       <Item.Description>
-                        <h3>Please choose one of the following answers:</h3>
+                        <h3>Escoge la alternativa que mejor responda:</h3>
                       </Item.Description>
                       <Divider />
                       <Menu vertical fluid size="massive">
@@ -292,6 +292,12 @@ class Quiz extends Component {
                               break;
                             case 3:
                               letter = 'D.';
+                              break;
+                            case 4:
+                              letter = 'E.';
+                              break;
+                            case 5:
+                              letter = 'F.';
                               break;
                             default:
                               letter = i;
