@@ -74,7 +74,7 @@ class Main extends Component {
                   {allFieldsSelected ? (
                     <Button
                       primary
-                      content="Start Quiz"
+                      content="Comienza putito!"
                       onClick={() => this.props.startQuiz(selectedValues)}
                       size="big"
                       icon="play"
@@ -84,7 +84,7 @@ class Main extends Component {
                     <Button
                       disabled
                       primary
-                      content="Start Quiz"
+                      content="Comienza putito!"
                       size="big"
                       icon="play"
                       labelPosition="right"
