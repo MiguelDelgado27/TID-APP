@@ -55,7 +55,7 @@ class Header extends Component {
               cursor: 'pointer'
             }}
           >
-            The Scrum App
+            Aplicación SCRUM
           </h1>
         </Menu.Item>
 
