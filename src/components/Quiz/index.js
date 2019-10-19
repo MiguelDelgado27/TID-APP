@@ -153,18 +153,14 @@ class Quiz extends Component {
 
 
     /*Snipt para agregar un documento*/
-    console.log("Prueba de una salida en log");
-    
-    db.collection("questions").doc("prueba01").set({
-      correct_answer: "Correcta papi",
+    console.log("Prueba de una salida en log 2");
+
+  var addYourDoc = db.collection('questions').add({
+    correct_answer: "Correcta papi",
       incorrect_answers: ["malo","muy malo","recontra malo","hipermalo"],
       question: "Question papi"
-  })
-  .then(function() {
-      console.log("Document successfully written!");
-  })
-  .catch(function(error) {
-      console.error("Error writing document: ", error);
+  }).then(ref => {
+    console.log('document ID: ', ref.id);
   });
   /*Fin del snipt*/
 
