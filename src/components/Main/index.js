@@ -50,7 +50,7 @@ class Main extends Component {
               <Item.Image src={codeImg} />
               <Item.Content>
                 <Item.Header>
-                  <h1>Examen para certificación PSPO I</h1>
+                  <h1>Certificación PSPO I</h1>
                 </Item.Header>
                 <br />
                 <Divider />

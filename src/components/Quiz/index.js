@@ -253,7 +253,7 @@ class Quiz extends Component {
                       <Header as="h1" block floated="left">
                         <Icon name="info circle" />
                         <Header.Content>
-                          {`Question No.${questionIndex + 1} of ${
+                          {`Pregunta del ${questionIndex + 1} al ${
                             quizData.length
                           }`}
                         </Header.Content>

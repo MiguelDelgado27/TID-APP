@@ -58,21 +58,6 @@ class Header extends Component {
             Aplicación SCRUM
           </h1>
         </Menu.Item>
-
-        {promptEvent && !isAppInstalled && (
-          <Menu.Menu position="right">
-            <Menu.Item>
-              <Button
-                color="teal"
-                content="Install App"
-                size="big"
-                icon="app store"
-                labelPosition="left"
-                onClick={this.installApp}
-              />
-            </Menu.Item>
-          </Menu.Menu>
-        )}
       </Menu>
     );
   }
