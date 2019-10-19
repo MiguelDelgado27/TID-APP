@@ -151,9 +151,10 @@ class Quiz extends Component {
       questionsAndAnswers
     });
 
-    console.log("Prueba de una salida en log");
 
-    /*Snipt para agregar un documento
+    /*Snipt para agregar un documento*/
+    console.log("Prueba de una salida en log");
+    
     db.collection("questions").doc("prueba01").set({
       correct_answer: "Correcta papi",
       incorrect_answers: ["malo","muy malo","recontra malo","hipermalo"],
@@ -164,7 +165,7 @@ class Quiz extends Component {
   })
   .catch(function(error) {
       console.error("Error writing document: ", error);
-  });*/
+  });
   /*Fin del snipt*/
 
   }
