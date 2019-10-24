@@ -152,7 +152,7 @@ class Quiz extends Component {
     });
 
 
-    /*Snipt para agregar un documento*/
+    /*Snipt para agregar un documento
     console.log("Prueba de una salida en log 3");
 
   var addYourDoc = db.collection('questions').add({
@@ -162,7 +162,7 @@ class Quiz extends Component {
   }).then(ref => {
     console.log('document ID: ', ref.id);
   });
-  /*Fin del snipt*/
+  Fin del snipt*/
 
   }
 
@@ -281,9 +281,7 @@ class Quiz extends Component {
                     <br />
                     <Item.Meta>
                       <Message size="huge" floating>
-                        <b>{`Q. ${he.decode(
-                          quizData[questionIndex].question
-                        )}`}</b>
+                        <td dangerouslySetInnerHTML={{__html: `<b>${quizData[questionIndex].question}</b>`}} />
                       </Message>
                       <br />
                       <Item.Description>
