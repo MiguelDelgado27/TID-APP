@@ -9,7 +9,7 @@ const Stats = props => {
     totalQuestions,
     correctAnswers,
     timeTakesToComplete,
-    retakeQuiz,
+    
     backToHome
   } = props;
 
@@ -43,7 +43,6 @@ const Stats = props => {
         Time Takes: {`${hours} : ${minutes} : ${seconds}`}
       </Header>
       <div style={{ marginTop: 35 }}>
-       
         <Button
           color="teal"
           content="Back to Home"

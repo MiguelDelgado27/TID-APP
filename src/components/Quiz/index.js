@@ -330,6 +330,12 @@ class Quiz extends Component {
                             case 5:
                               letter = 'F.';
                               break;
+                            case 6:
+                              letter = 'G.';
+                              break;
+                            case 7:
+                              letter = 'H.';
+                              break;
                             default:
                               letter = i;
                               break;
