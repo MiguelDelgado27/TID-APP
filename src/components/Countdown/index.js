@@ -28,7 +28,7 @@ class Countdown extends Component {
       } else {
         clearInterval(this.timer);
         Swal.fire({
-          title: 'YOUR TIME IS UP',
+          title: 'SE HA ACABADO EL TIEMPO',
           type: 'info',
           timer: 5000,
           onClose: () => {

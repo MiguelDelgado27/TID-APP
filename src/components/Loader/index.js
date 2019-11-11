@@ -6,8 +6,8 @@ const Loader = ({ text }) => (
     <Message icon size="big">
       <Icon name="circle notched" loading />
       <Message.Content>
-        <Message.Header>Just one second</Message.Header>
-        {text || 'We are fetching that content for you.'}
+        <Message.Header>Un segundo por favor</Message.Header>
+        {text || 'Estamos seleccionando las preguntas más difíciles'}
       </Message.Content>
     </Message>
   </Container>

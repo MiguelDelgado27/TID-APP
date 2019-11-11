@@ -50,21 +50,21 @@ class Main extends Component {
               <Item.Image src={codeImg} />
               <Item.Content>
                 <Item.Header>
-                  <h1>Open Trivia Questions</h1>
+                  <h1>Certificación PSPO I</h1>
                 </Item.Header>
                 <br />
                 <Divider />
                 <Item.Meta>
                   <Select
                     name="numOfQ"
-                    text="Select No. of Questions"
+                    text="Selecciona el número de preguntas"
                     options={NUM_OF_QUESTIONS}
                     onChange={this.setValue}
                   />
                   <br />
                   <Select
                     name="time"
-                    text="Select Countdown Time (In Minutes)"
+                    text="Selecciona el tiempo (En minutos)"
                     options={COUNTDOWN_TIME}
                     onChange={this.setValue}
                   />
@@ -74,7 +74,7 @@ class Main extends Component {
                   {allFieldsSelected ? (
                     <Button
                       primary
-                      content="Start Quiz"
+                      content="Comenzar Quiz"
                       onClick={() => this.props.startQuiz(selectedValues)}
                       size="big"
                       icon="play"
@@ -84,7 +84,7 @@ class Main extends Component {
                     <Button
                       disabled
                       primary
-                      content="Start Quiz"
+                      content="Comenzar Quiz"
                       size="big"
                       icon="play"
                       labelPosition="right"

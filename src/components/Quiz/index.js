@@ -71,7 +71,7 @@ class Quiz extends Component {
   }
 
   setData(results) {
-    // console.log(results);
+    console.log(results);
     if (results.length === 0) {
       const message =
         "The API doesn't have enough questions for your query<br />" +
@@ -169,6 +169,20 @@ class Quiz extends Component {
       outPut,
       questionsAndAnswers
     });
+
+
+    /*Snipt para agregar un documento
+    console.log("Prueba de una salida en log 3");
+
+  var addYourDoc = db.collection('questions').add({
+    correct_answer: "Correcta papi",
+      incorrect_answers: ["malo","muy malo","recontra malo","hipermalo"],
+      question: "Question papi"
+  }).then(ref => {
+    console.log('document ID: ', ref.id);
+  });
+  Fin del snipt*/
+
   }
 
   timesUp() {
@@ -272,7 +286,7 @@ class Quiz extends Component {
                       <Header as="h1" block floated="left">
                         <Icon name="info circle" />
                         <Header.Content>
-                          {`Question No.${questionIndex + 1} of ${
+                          {`Pregunta No. ${questionIndex + 1} de ${
                             quizData.length
                           }`}
                         </Header.Content>
@@ -286,13 +300,11 @@ class Quiz extends Component {
                     <br />
                     <Item.Meta>
                       <Message size="huge" floating>
-                        <b>{`Q. ${he.decode(
-                          quizData[questionIndex].question
-                        )}`}</b>
+                        <td dangerouslySetInnerHTML={{__html: `<b>${quizData[questionIndex].question}</b>`}} />
                       </Message>
                       <br />
                       <Item.Description>
-                        <h3>Please choose one of the following answers:</h3>
+                        <h3>Escoge la alternativa que mejor responda:</h3>
                       </Item.Description>
                       <Divider />
                       <Menu vertical fluid size="massive">
@@ -311,6 +323,12 @@ class Quiz extends Component {
                               break;
                             case 3:
                               letter = 'D.';
+                              break;
+                            case 4:
+                              letter = 'E.';
+                              break;
+                            case 5:
+                              letter = 'F.';
                               break;
                             default:
                               letter = i;
@@ -338,7 +356,7 @@ class Quiz extends Component {
                       {userSlectedAns ? (
                         <Button
                           primary
-                          content="Next"
+                          content="Siguiente"
                           onClick={this.handleNext}
                           floated="right"
                           size="big"
@@ -349,7 +367,7 @@ class Quiz extends Component {
                         <Button
                           disabled
                           primary
-                          content="Next"
+                          content="Siguiente"
                           floated="right"
                           size="big"
                           icon="right chevron"
