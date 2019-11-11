@@ -43,15 +43,7 @@ const Stats = props => {
         Time Takes: {`${hours} : ${minutes} : ${seconds}`}
       </Header>
       <div style={{ marginTop: 35 }}>
-        <Button
-          primary
-          content="Retake Quiz"
-          onClick={retakeQuiz}
-          size="big"
-          icon="redo"
-          labelPosition="right"
-          style={{ marginRight: 15, marginBottom: 8 }}
-        />
+       
         <Button
           color="teal"
           content="Back to Home"

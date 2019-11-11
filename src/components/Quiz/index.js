@@ -31,7 +31,7 @@ class Quiz extends Component {
       isLoading: true,
       questionIndex: 0,
       correctAnswers: 0,
-      userSlectedAns: null,
+      userSlectedAns: [],
       quizIsCompleted: false,
       questionsAndAnswers: [],
       isOffline: false
@@ -90,17 +90,24 @@ class Quiz extends Component {
       });
     }
     const quizData = results;
-    //const quizData = staticQuestions;
+    
+    //const quizData = [PM1,PM2];
     const { questionIndex } = this.state;
     const outPut = getRandomNumber(0, 3);
-    const options = [...quizData[questionIndex].incorrect_answers];
-    options.splice(outPut, 0, quizData[questionIndex].correct_answer);
+    const options = [...quizData[questionIndex].incorrect_answers.concat(quizData[questionIndex].correct_answer)];
+    //options.splice(outPut, 0, quizData[questionIndex].correct_answer);
 
     this.setState({ quizData, isLoading: false, options, outPut });
   }
 
   handleItemClick(e, { name }) {
-    this.setState({ userSlectedAns: name });
+    let userSelectedAns = this.state.userSlectedAns;
+    if (userSelectedAns.includes(name))  {
+      userSelectedAns = userSelectedAns.filter(item => item !== name)
+    }else{
+      userSelectedAns.push(name)
+    }
+    this.setState({ userSlectedAns: userSelectedAns });
   }
 
   handleNext() {
@@ -113,21 +120,32 @@ class Quiz extends Component {
     } = this.state;
 
     let point = 0;
-    if (userSlectedAns === he.decode(quizData[questionIndex].correct_answer)) {
+    let correct = 0;
+    let selected = userSlectedAns.length;
+    let correctlength = quizData[questionIndex].correct_answer.length
+    userSlectedAns.forEach(answer =>{
+      if(quizData[questionIndex].correct_answer.includes(answer)){
+        correct = correct + 1;
+      }
+    })
+
+    if (correct === selected && correctlength === correct) {
       point = 1;
     }
 
+    let question = he.decode(quizData[questionIndex].question)
+    let correct_answer = quizData[questionIndex].correct_answer;
     questionsAndAnswers.push({
-      question: he.decode(quizData[questionIndex].question),
+      question,
       user_answer: userSlectedAns,
-      correct_answer: he.decode(quizData[questionIndex].correct_answer),
+      correct_answer,
       point
     });
 
     if (questionIndex === quizData.length - 1) {
       this.setState({
         correctAnswers: correctAnswers + point,
-        userSlectedAns: null,
+        userSlectedAns: [],
         isLoading: true,
         quizIsCompleted: true,
         questionIndex: 0,
@@ -139,13 +157,14 @@ class Quiz extends Component {
 
     const outPut = getRandomNumber(0, 3);
 
-    const options = [...quizData[questionIndex + 1].incorrect_answers];
-    options.splice(outPut, 0, quizData[questionIndex + 1].correct_answer);
+    const options = [...quizData[questionIndex + 1].incorrect_answers.concat(quizData[questionIndex + 1].correct_answer)];
+    //options.splice(outPut, 0, quizData[questionIndex + 1].correct_answer);
+    
 
     this.setState({
       correctAnswers: correctAnswers + point,
       questionIndex: questionIndex + 1,
-      userSlectedAns: null,
+      userSlectedAns: [],
       options,
       outPut,
       questionsAndAnswers
@@ -154,7 +173,7 @@ class Quiz extends Component {
 
   timesUp() {
     this.setState({
-      userSlectedAns: null,
+      userSlectedAns: [],
       isLoading: true,
       quizIsCompleted: true,
       questionIndex: 0,
@@ -304,7 +323,7 @@ class Quiz extends Component {
                             <Menu.Item
                               key={decodedOption}
                               name={decodedOption}
-                              active={userSlectedAns === decodedOption}
+                              active={userSlectedAns.includes(decodedOption)}
                               onClick={this.handleItemClick}
                             >
                               <b style={{ marginRight: '8px' }}>{letter}</b>

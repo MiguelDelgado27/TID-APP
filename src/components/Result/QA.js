@@ -17,8 +17,8 @@ const QA = ({ questionsAndAnswers }) => (
         <Table.Row key={i + 1}>
           <Table.Cell>{i + 1}</Table.Cell>
           <Table.Cell>{item.question}</Table.Cell>
-          <Table.Cell>{item.user_answer}</Table.Cell>
-          <Table.Cell>{item.correct_answer}</Table.Cell>
+          <Table.Cell>{item.user_answer.join(' - ')}</Table.Cell>
+          <Table.Cell>{item.correct_answer.join(' - ')}</Table.Cell>
           <Table.Cell>{item.point}</Table.Cell>
         </Table.Row>
       ))}
