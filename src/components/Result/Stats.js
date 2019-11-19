@@ -31,7 +31,7 @@ const Stats = props => {
         Nro. Preguntas: {totalQuestions}
       </Header>
       <Header as="h3" textAlign="center" block>
-        Rspuestas Correctas: {correctAnswers}
+        Respuestas Correctas: {correctAnswers}
       </Header>
       <Header as="h3" textAlign="center" block>
         Tu puntaje: {score}%
