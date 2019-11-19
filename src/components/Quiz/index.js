@@ -170,19 +170,6 @@ class Quiz extends Component {
       questionsAndAnswers
     });
 
-
-    /*Snipt para agregar un documento
-    console.log("Prueba de una salida en log 3");
-
-  var addYourDoc = db.collection('questions').add({
-    correct_answer: "Correcta papi",
-      incorrect_answers: ["malo","muy malo","recontra malo","hipermalo"],
-      question: "Question papi"
-  }).then(ref => {
-    console.log('document ID: ', ref.id);
-  });
-  Fin del snipt*/
-
   }
 
   timesUp() {

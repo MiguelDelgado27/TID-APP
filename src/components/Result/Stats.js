@@ -25,22 +25,22 @@ const Stats = props => {
         {remarks}
       </Header>
       <Header as="h2" textAlign="center" block>
-        Grade: {grade}
+        Grado: {grade}
       </Header>
       <Header as="h3" textAlign="center" block>
-        Total Questions: {totalQuestions}
+        Nro. Preguntas: {totalQuestions}
       </Header>
       <Header as="h3" textAlign="center" block>
-        Correct Answers: {correctAnswers}
+        Rspuestas Correctas: {correctAnswers}
       </Header>
       <Header as="h3" textAlign="center" block>
-        Your Score: {score}%
+        Tu puntaje: {score}%
       </Header>
       <Header as="h3" textAlign="center" block>
-        Passing Score: 60%
+        Puntaje de Certificación: 85%
       </Header>
       <Header as="h3" textAlign="center" block>
-        Time Takes: {`${hours} : ${minutes} : ${seconds}`}
+        Tiempo transcurrido: {`${hours} : ${minutes} : ${seconds}`}
       </Header>
       <div style={{ marginTop: 35 }}>
         <Button
